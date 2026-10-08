@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="theme-color" content="#1d4a35">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lướt – Thuê xe tự lái</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<header class="w">
+  <nav>
+    <a class="logo" href="#top"><b>🚗</b>lướt</a>
+    <ul><li><a href="#/dong-xe">Thuê xe</a></li><li><a href="#/thue-xe">Đăng ký thuê</a></li><li><a href="#/diem-den">Điểm đến</a></li><li><a href="#/uu-dai">Ưu đãi</a></li><li><a href="#/doi-tac">Đăng xe</a></li><li><a href="#/ve-luot">Về Lướt</a></li></ul>
+    <div class="nr"><span class="tel">📞 1900 2323</span><a class="btn" id="login" href="#/dang-nhap">Đăng nhập</a><button class="burger" id="burger" type="button" aria-label="Mở menu" aria-expanded="false">☰</button></div>
+  </nav>
+  <div class="hero">
+    <div>
+      <span class="tag" style="background:#e7efe2;border-radius:999px;padding:3px 10px;margin:0"><i></i>Mới · Giao xe tận nơi tại TP.HCM &amp; Hà Nội</span>
+      <h1>Mỗi hành trình, một chiếc xe đúng gu.</h1>
+      <p class="mut">Thuê xe đời mới, thủ tục tinh gọn và hỗ trợ xuyên suốt. Tự lái theo cách của bạn — từ phố quen đến cung đường mới.</p>
+      <div class="checks"><span>Không phí ẩn</span><span>Xác nhận tức thì</span><span>Hỗ trợ 24/7</span></div>
+    </div>
+    <div class="ph himg" data-art="scene:n:0" data-key="hero"><span class="chip">⚡ Lựa chọn xe điện</span></div>
+  </div>
+</header>
+
+<main>
+<div class="w">
+  <form class="search" id="tim-xe" onsubmit="event.preventDefault();document.getElementById('xe').scrollIntoView()">
+    <div class="tabs" role="tablist"><button type="button" class="on">Tự lái</button><button type="button">Có tài xế</button><span style="margin-left:auto;color:var(--mut);align-self:center">Miễn phí hủy trước 24 giờ</span></div>
+    <div class="sg">
+      <label class="fld"><small>Nhận xe tại</small><select id="city"><option>TP. Hồ Chí Minh</option><option>Hà Nội</option><option>Đà Nẵng</option><option>Đà Lạt</option><option>Phú Quốc</option></select></label>
+      <label class="fld"><small>Ngày nhận</small><input type="datetime-local" id="d1" required></label>
+      <label class="fld"><small>Ngày trả</small><input type="datetime-local" id="d2" required></label>
+      <button class="btn lime">🔍 Tìm xe phù hợp</button>
+    </div>
+  </form>
+</div>
+
+<section id="xe"><div class="w">
+  <div class="head"><div><span class="tag"><i></i>Dòng xe nổi bật</span><h2>Chọn chiếc xe hợp hành trình</h2><p class="mut" style="margin-top:8px;font-size:13px">Xe đời mới, vệ sinh kỹ và kiểm định trước mỗi chuyến đi.</p></div><button class="btn" id="all" type="button">Xem tất cả 120+ xe</button></div>
+  <div class="filters" id="f"><button class="on">Tất cả</button><button>Xe điện</button><button>SUV</button><button>Sedan</button><button>7 chỗ</button><button>Xe sang</button></div>
+  <div class="grid3" id="cars"></div><p class="mut" id="cnt" style="margin-top:16px;font-size:13px"></p>
+</div></section>
+
+<section class="dark-s"><div class="w why">
+  <div>
+    <span class="tag"><i></i>Vì sao chọn Lướt</span><h2>An tâm từ lúc đặt đến khi trả xe</h2>
+    <p class="mut" style="margin-top:14px;font-size:13px">Chúng tôi loại bỏ mọi bất ngờ không đáng có, để bạn chỉ cần tập trung hướng tay lái và hành trình phía trước.</p>
+    <div class="feat"><i>✓</i><p><b>Xe chuẩn, giá minh bạch</b>Ảnh xe thật, giá trọn gói hiển thị trước khi xác nhận.</p></div>
+    <div class="feat"><i>🛡</i><p><b>Bảo hiểm an tâm</b>Mọi chuyến đi đều có gói bảo hiểm và cứu hộ toàn quốc.</p></div>
+    <div class="feat"><i>✨</i><p><b>Sạch từ tay lái</b>Xe được vệ sinh sâu và kiểm tra 28 điểm trước khi giao.</p></div>
+  </div>
+  <div class="ph wimg" data-art="scene:h:5" data-key="why"><div class="stat"><b>96.000+</b><span>chuyến đi an toàn</span></div></div>
+</div></section>
+
+<section><div class="w">
+  <div class="head"><div><span class="tag"><i></i>Chỉ 4 bước</span><h2>Thuê xe nhẹ như một cú chạm</h2></div><p class="mut" style="max-width:22em;font-size:13px">Không xếp hàng, không giấy tờ lòng vòng. Tất cả được chuẩn bị trước trên Lướt.</p></div>
+  <div class="steps">
+    <a class="st" href="#tim-xe"><i>🔍</i><div><h3>Tìm xe</h3><p>Chọn địa điểm, thời gian và mẫu xe bạn yêu thích.</p><span class="go2">Thử ngay →</span></div></a>
+    <a class="st" href="#/thue-xe"><i>▣</i><div><h3>Xác thực</h3><p>Tải GPLX, CCCD — hoàn tất trực tuyến trong vài phút.</p><span class="go2">Thử ngay →</span></div></a>
+    <a class="st" href="#/diem-den"><i>🔑</i><div><h3>Nhận xe</h3><p>Nhận tại trạm Lướt hoặc giao tận nơi theo lịch hẹn.</p><span class="go2">Thử ngay →</span></div></a>
+    <a class="st on" href="#/ho-tro"><i>⇄</i><div><h3>Tự do lướt</h3><p>Bắt đầu hành trình, luôn có đội ngũ hỗ trợ 24/7.</p><span class="go2">Thử ngay →</span></div></a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="promo">
+    <div class="tx"><span class="lab">ƯU ĐÃI THÁNG 10</span><h2>Mở cung đường mới, giảm ngay 20%</h2><p class="mut" style="font-size:13px;margin-bottom:24px">Áp dụng cho chuyến đi từ 3 ngày tại Đà Nẵng, Đà Lạt và Phú Quốc. Nhập <b style="color:var(--ink)">LUOT20</b> khi đặt xe.</p><button class="btn dark" id="promo" type="button">Sao chép mã LUOT20</button></div>
+    <div class="ph" data-art="scene:l:3" data-key="promo"><span class="off">-20%</span></div>
+  </div>
+</div></section>
+
+<section id="diem-den" style="padding-top:24px"><div class="w">
+  <div class="head"><div><span class="tag"><i></i>Điểm đến phổ biến</span><h2>Đi đâu cũng có Lướt đồng hành</h2><p class="mut" style="margin-top:8px;font-size:13px">Nhận xe nhanh tại sân bay và trung tâm thành phố.</p></div><a class="btn" href="#/diem-den">Tất cả điểm đến</a></div>
+  <div class="grid3" id="hdest"></div>
+</div></section>
+
+<section><div class="w">
+  <div class="head"><div><span class="tag"><i></i>Khách hàng nói gì</span><h2>Những chuyến đi được kể lại</h2><p class="mut" style="margin-top:8px;font-size:13px">4,9/5 từ hơn 12.000 đánh giá đã xác thực.</p></div><div class="score">4,9 <span class="stars">★★★★★</span></div></div>
+  <div class="grid3">
+    <div class="rv"><div class="stars">★★★★★</div><p style="font-size:13px">“Xe đúng như ảnh, sạch và thơm. Mình nhận xe tại sân bay Đà Nẵng chỉ mất 5 phút, chuyển Hội An nhẹ nhàng hơn hẳn.”</p><div class="u"><span class="av"></span><span><b>Minh Anh</b>Đà Nẵng · Mazda CX-5</span></div></div>
+    <div class="rv"><div class="stars">★★★★★</div><p style="font-size:13px">“Đặt xe cho cả gia đình rất dễ. Carnival rộng, ghế trẻ em chuẩn bị sẵn và đội hỗ trợ phản hồi gần như ngay lập tức.”</p><div class="u"><span class="av"></span><span><b>Tuấn Nguyễn</b>TP.HCM · Kia Carnival</span></div></div>
+    <div class="rv"><div class="stars">★★★★★</div><p style="font-size:13px">“Lần đầu thuê xe điện nhưng được hướng dẫn rất kỹ. Giá rõ ràng, giao xe đúng giờ và không phát sinh khoản nào.”</p><div class="u"><span class="av"></span><span><b>Bảo Trâm</b>Hà Nội · VinFast VF 6</span></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="app">
+    <div><h2>Xe gần bạn. Sẵn sàng trong vài chạm.</h2><p class="mut">Đặt xe, mở khóa, gia hạn chuyến và nhận hỗ trợ — tất cả trong một ứng dụng.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#">Tải trên App Store</a><a class="btn" href="#">Tải trên Google Play</a></div></div>
+    <div class="phone" aria-hidden="true"><small>Chào buổi sáng, Minh</small><b>Bạn muốn đi đâu?</b><div class="ph" data-art="car:0"></div>VinFast VF 6 <b style="display:inline;float:right;font-size:11px">1.190k/ngày</b></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w faq">
+  <div><span class="tag"><i></i>Câu hỏi thường gặp</span><h2>Mọi điều bạn cần biết trước khi lăn bánh</h2><p class="mut" style="margin:12px 0 20px;font-size:13px">Chưa tìm thấy câu trả lời? Đội ngũ Lướt luôn sẵn sàng hỗ trợ bạn 24/7.</p><a class="btn" href="#/ho-tro">💬 Trò chuyện với Lướt</a></div>
+  <div>
+    <details open><summary>Cần giấy tờ gì để thuê xe tự lái?</summary><p>Bạn cần GPLX còn hạn, CCCD/hộ chiếu và tài khoản định danh đã xác thực trên ứng dụng Lướt.</p></details>
+    <details><summary>Giá thuê đã bao gồm những khoản nào?</summary><p>Giá hiển thị là giá trọn gói gồm bảo hiểm cơ bản và phí vệ sinh. Phí phát sinh (nếu có) được báo trước khi bạn xác nhận.</p></details>
+    <details><summary>Tôi có thể nhận xe tại sân bay không?</summary><p>Có. Lướt có trạm nhận xe tại các sân bay lớn và có thể giao xe tận nơi theo lịch hẹn.</p></details>
+    <details><summary>Nếu cần gia hạn chuyến đi thì làm thế nào?</summary><p>Mở chuyến đi trong ứng dụng, chọn “Gia hạn” và chọn thời gian mới. Xác nhận ngay nếu xe còn trống.</p></details>
+  </div>
+</div></section>
+</main>
+
+
+<section class="pg w" id="v-login" hidden><div class="auth"><div class="side"><span class="tag" style="color:#b3c7bc"><i></i>Chào mừng trở lại</span><h2 style="color:#fff;font-weight:700">Đăng nhập để lướt tiếp</h2><p style="color:#b3c7bc;font-size:13px;margin-top:12px">Quản lý chuyến đi, thông tin giấy tờ và ưu đãi của bạn.</p></div>
+<form id="fl" novalidate><h3>Đăng nhập</h3>
+<label class="f">Email<input class="in" name="email" type="email" autocomplete="email"></label>
+<label class="f">Mật khẩu<input class="in" name="pw" type="password" autocomplete="current-password"></label><a href="#/quen-mat-khau" style="font-size:12px"><b>Quên mật khẩu?</b></a>
+<p class="err" role="alert"></p><button class="btn lime wide">Đăng nhập</button>
+<p class="mut sm">Chưa có tài khoản? <a href="#/dang-ky"><b>Đăng ký</b></a></p></form></div></section>
+
+<section class="pg w" id="v-reg" hidden><div class="auth"><div class="side"><span class="tag" style="color:#b3c7bc"><i></i>Miễn phí, 1 phút</span><h2 style="color:#fff;font-weight:700">Tạo tài khoản Lướt</h2><p style="color:#b3c7bc;font-size:13px;margin-top:12px">Đặt xe nhanh hơn, nhận ưu đãi thành viên và lưu thông tin cho lần sau.</p></div>
+<form id="fg" novalidate><h3>Đăng ký</h3>
+<label class="f">Họ và tên<input class="in" name="nm" autocomplete="name"></label>
+<div class="g2"><label class="f">Email<input class="in" name="email" type="email" autocomplete="email"></label><label class="f">Số điện thoại<input class="in" name="ph" inputmode="tel" autocomplete="tel"></label>
+<label class="f">Mật khẩu<input class="in" name="pw" type="password" autocomplete="new-password"></label><label class="f">Nhập lại mật khẩu<input class="in" name="pw2" type="password" autocomplete="new-password"></label></div>
+<label class="ext"><input type="checkbox" name="tc"> Tôi đồng ý với điều khoản sử dụng của Lướt</label>
+<p class="err" role="alert"></p><button class="btn lime wide">Tạo tài khoản</button>
+<p class="mut sm">Đã có tài khoản? <a href="#/dang-nhap"><b>Đăng nhập</b></a></p></form></div></section>
+
+<section class="pg w" id="v-rent" hidden><div style="padding:32px 0 0"><h2>Đăng ký thuê xe</h2><p class="mut" style="margin-top:8px;font-size:13px">Hoàn tất trong 3 bước. <span id="rnote">Bạn có thể <a href="#/dang-nhap"><b>đăng nhập</b></a> để tự điền thông tin.</span></p></div>
+<div class="rent"><form class="card" id="fr2" novalidate>
+<div class="steps2"><span>1. Chuyến đi</span><span>2. Người thuê</span><span>3. Xác nhận</span></div>
+<div data-s="1"><label class="f">Chọn xe<select class="in" name="car"></select></label>
+<div class="g2"><label class="f">Nhận xe tại<select class="in" name="city"><option>TP. Hồ Chí Minh</option><option>Hà Nội</option><option>Đà Nẵng</option><option>Đà Lạt</option><option>Phú Quốc</option></select></label><span></span>
+<label class="f">Ngày nhận<input class="in" type="datetime-local" name="rd1"></label><label class="f">Ngày trả<input class="in" type="datetime-local" name="rd2"></label></div>
+<label class="ext"><input type="checkbox" name="del"> Giao xe tận nơi (+150.000đ)</label>
+<label class="f" id="addrw" hidden>Địa chỉ giao xe<input class="in" name="addr" autocomplete="street-address"></label>
+<label class="ext"><input type="checkbox" name="ins"> Bảo hiểm mở rộng (+100.000đ/ngày)</label></div>
+<div data-s="2" hidden><div class="g2"><label class="f">Họ và tên<input class="in" name="nm" autocomplete="name"></label><label class="f">Số điện thoại<input class="in" name="ph" inputmode="tel" autocomplete="tel"></label>
+<label class="f">Email<input class="in" name="em" type="email" autocomplete="email"></label><label class="f">Số CCCD (12 số)<input class="in" name="cccd" inputmode="numeric"></label>
+<label class="f">Số GPLX<input class="in" name="gp" inputmode="numeric"></label><label class="f">Hạng GPLX<select class="in" name="hang"><option value="">Chọn hạng</option><option>B1</option><option>B2</option><option>C</option><option>D</option><option>E</option></select></label></div></div>
+<div data-s="3" hidden><label class="f">Mã giảm giá (LUOT20, EV10, CHAOBAN)<input class="in" name="pc"></label><p style="font-weight:600;margin:14px 0 4px">Phương thức thanh toán</p>
+<label class="ext"><input type="radio" name="pay" value="Tiền mặt khi nhận xe" checked> Tiền mặt khi nhận xe</label>
+<label class="ext"><input type="radio" name="pay" value="Chuyển khoản"> Chuyển khoản ngân hàng</label>
+<label class="ext"><input type="radio" name="pay" value="Thẻ / Ví điện tử"> Thẻ / Ví điện tử</label>
+<label class="ext" style="margin-top:10px"><input type="checkbox" name="tc"> Tôi xác nhận thông tin chính xác và đồng ý điều khoản thuê xe</label></div>
+<p class="err" role="alert"></p>
+<div style="display:flex;gap:10px;margin-top:12px"><button type="button" class="btn" id="rb">Quay lại</button><button class="btn lime" id="rn">Tiếp tục</button></div>
+</form><aside class="card" id="rs"></aside></div></section>
+
+<section class="pg w" id="sp" hidden></section>
+<div class="cta"><div class="w"><div><h3>Sẵn sàng cho hành trình tiếp theo?</h3><p style="font-size:12px">Hơn 120 mẫu xe đang chờ bạn tại 8 thành phố.</p></div><a class="btn dark" href="#xe">Tìm xe ngay</a></div></div>
+
+<footer><div class="w">
+  <div class="fg">
+    <div><a class="logo" href="#"><b>🚗</b>lướt</a><p style="font-size:12px;color:#b3c7bc;margin-top:14px;max-width:22em">Nền tảng thuê xe tự lái linh hoạt dành cho những hành trình hiện đại tại Việt Nam.</p></div>
+    <div><h4>Dịch vụ</h4><ul><li><a href="#/dong-xe">Thuê xe tự lái</a></li><li><a href="#/ho-tro">Thuê xe có tài xế</a></li><li><a href="#/ho-tro">Thuê xe dài hạn</a></li><li><a href="#/doi-tac">Đối tác chủ xe</a></li></ul></div>
+    <div><h4>Khám phá</h4><ul><li><a href="#/dong-xe">Dòng xe</a></li><li><a href="#/diem-den">Điểm đến</a></li><li><a href="#/uu-dai">Ưu đãi</a></li><li><a href="#/ve-luot">Cẩm nang hành trình</a></li></ul></div>
+    <div><h4>Hỗ trợ</h4><ul><li><a href="#/ho-tro">Trung tâm trợ giúp</a></li><li><a href="#/dieu-khoan">Điều khoản sử dụng</a></li><li><a href="#/dieu-khoan/bao-mat">Chính sách bảo mật</a></li><li><a href="tel:19002323">1900 2323</a></li></ul></div>
+  </div>
+  <div class="copy"><span>© 2026 Lướt Mobility. Đã đăng ký bản quyền.</span><span>Đang phục vụ tại 8 thành phố trên toàn quốc</span></div>
+</div></footer>
+
+<nav class="tabbar" aria-label="Điều hướng nhanh"><a href="#top" data-t="">🏠<span>Trang chủ</span></a><a href="#/dong-xe" data-t="dong-xe">🚗<span>Xe</span></a><a href="#/uu-dai" data-t="uu-dai">🎁<span>Ưu đãi</span></a><a href="#/chuyen-cua-toi" data-t="chuyen-cua-toi">🧳<span>Chuyến</span></a><a href="#/ho-so" data-t="ho-so">👤<span>Tài khoản</span></a></nav><dialog id="m"></dialog><div id="toast" role="status"></div>
+<script src="config.js"></script>
+<script src="db.js"></script>
+<script src="catalog.js"></script>
+<script src="art.js"></script>
+<script src="script.js"></script>
+<script src="pages.js"></script>
+<script src="reviews.js"></script>
+<script src="listings.js"></script>
+<script src="admin.js"></script>
+<script src="api.js"></script>
+</body>
+</html>
